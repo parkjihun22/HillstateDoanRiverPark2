@@ -217,23 +217,6 @@ const Main = () => {
 
   return (
     <>
-      {/* ✅ 메인 페이지 SEO 메타 */}
-      <Helmet>
-        <title>힐스테이트 도안리버파크 - 도안신도시 핵심, 5,329세대 브랜드타운</title>
-        <meta
-          name="description"
-          content="대전 도안신도시 힐스테이트 도안리버파크. 트램(2호선 예정)·유성IC 광역망, 신설 초·중학교, 갑천·유림공원 인접의 프리미엄 브랜드타운."
-        />
-        <link rel="canonical" href="https://www.apay.co.kr/" />
-        <meta name="robots" content="index,follow" />
-        {/* SNS 미리보기 기본 */}
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="힐스테이트 도안리버파크" />
-        <meta property="og:title" content="힐스테이트 도안리버파크 - 도안신도시 핵심, 5,329세대 브랜드타운" />
-        <meta property="og:description" content="도안신도시 핵심 입지와 브랜드 프리미엄을 확인하세요." />
-        <meta property="og:image" content="https://www.apay.co.kr/img/og/main.jpg" />
-        <meta property="og:url" content="https://www.apay.co.kr/" />
-      </Helmet>
 
       {!isMobile ? (
         // PC 버전
