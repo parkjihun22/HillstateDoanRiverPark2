@@ -452,7 +452,7 @@ const Main = () => {
             {/* 입력 폼 */}
             <form
               className={styles.pcVisitForm}
-              action="https://formspree.io/f/mzzvgern"
+              action="https://formspree.io/f/xyzdjypb"
               method="POST"
             >
               <label htmlFor="name">
@@ -734,7 +734,7 @@ const Main = () => {
 
             <form
               className={styles.mobileVisitForm}
-              action="https://formspree.io/f/mzzvgern"
+              action="https://formspree.io/f/xyzdjypb"
               method="POST"
             >
               <label htmlFor="name">
