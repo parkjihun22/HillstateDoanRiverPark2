@@ -489,6 +489,18 @@ const Main = () => {
                 autoComplete="off"
                 className={styles.hiddenHoney}
               />
+                {/* 🔹 생년월일 입력 추가 */}
+                <label htmlFor="birthdate">
+                  생년월일 <span className={styles.redStar}>*</span>
+                </label>
+                <input
+                  type="text"
+                  name="birthdate"
+                  placeholder="예: 950527"
+                  value={registration.birthdate}
+                  onChange={handleInputChange}
+                  required
+                />
 
               <label htmlFor="message">
                 문의 내용
@@ -723,34 +735,35 @@ const Main = () => {
           </div> */}
           <MobileNewsSection newsList={newsLists} />
 
-          {/* 모바일 방문예약 섹션 */}
-          <div className={styles.mobileVisitContainer}>
-            <h2>힐스테이트 도안리버파크</h2>
-            <p className={styles.mobileSubTitle}>방문예약</p>
-            <p className={styles.mobileInfoText}>
-              방문예약 등록 시 모델하우스 주소 SMS발송 및<br />
-              잔여세대를 안내드립니다.
-            </p>
+            {/* 모바일 방문예약 섹션 */}
+            <div className={styles.mobileVisitContainer}>
+              <h2>힐스테이트 도안리버파크</h2>
+              <p className={styles.mobileSubTitle}>방문예약</p>
+              <p className={styles.mobileInfoText}>
+                방문예약 등록 시 모델하우스 주소 SMS발송 및<br />
+                잔여세대를 안내드립니다.
+              </p>
 
-            <form
-              className={styles.mobileVisitForm}
-              action="https://formspree.io/f/xyzdjypb"
-              method="POST"
-            >
-              <label htmlFor="name">
-                고객명 <span className={styles.redStar}>*</span>
-              </label>
-              <input
-                type="text"
-                name="name"
-                placeholder="고객명"
-                value={registration.name}
-                onChange={handleInputChange}
-                required
-              />
-              <label htmlFor="phone">
-                연락처 <span className={styles.redStar}>*</span>
-              </label>
+              <form
+                className={styles.mobileVisitForm}
+                action="https://formspree.io/f/xyzdjypb"
+                method="POST"
+              >
+                <label htmlFor="name">
+                  고객명 <span className={styles.redStar}>*</span>
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="고객명"
+                  value={registration.name}
+                  onChange={handleInputChange}
+                  required
+                />
+
+                <label htmlFor="phone">
+                  연락처 <span className={styles.redStar}>*</span>
+                </label>
                 <input
                   type="tel"
                   name="phone"
@@ -763,29 +776,41 @@ const Main = () => {
                   title="예: 01012345678 또는 010-1234-5678"
                 />
 
-              {/* 허니팟 (봇 스팸 방지) */}
-              <input
-                type="text"
-                name="_gotcha"
-                tabIndex={-1}
-                autoComplete="off"
-                className={styles.hiddenHoney}
-              />
+                {/* 🔹 생년월일 입력 추가 */}
+                <label htmlFor="birthdate">
+                  생년월일 <span className={styles.redStar}>*</span>
+                </label>
+                <input
+                  type="text"
+                  name="birthdate"
+                  placeholder="예: 950527"
+                  value={registration.birthdate}
+                  onChange={handleInputChange}
+                  required
+                />
 
-              <label htmlFor="message">
-                문의 내용
-              </label>
-              <textarea
-                name="message"
-                placeholder="문의 내용이 있을 경우 이곳에 남겨주세요."
-                value={registration.message}
-                onChange={handleInputChange}
-                rows={5}
-              />
+                {/* 허니팟 (봇 스팸 방지) */}
+                <input
+                  type="text"
+                  name="_gotcha"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  className={styles.hiddenHoney}
+                />
 
-              <button type="submit">등록하기</button>
-            </form>
-          </div>
+                <label htmlFor="message">문의 내용</label>
+                <textarea
+                  name="message"
+                  placeholder="문의 내용이 있을 경우 이곳에 남겨주세요."
+                  value={registration.message}
+                  onChange={handleInputChange}
+                  rows={5}
+                />
+
+                <button type="submit">등록하기</button>
+              </form>
+            </div>
+
 
           {/* <div className={styles.section}>
             <div className={styles.section9}>
