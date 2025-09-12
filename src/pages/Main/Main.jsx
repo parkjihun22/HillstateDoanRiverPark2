@@ -698,7 +698,7 @@ const Main = () => {
             />
           </div>
 
-          {/* <UnitInfoSection /> */}
+          <UnitInfoSection />
 
           {/* <div className={styles.container4}>
             <div className={styles.text1}>UNITPLAN</div>

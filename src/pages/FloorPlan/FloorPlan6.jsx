@@ -10,8 +10,8 @@ import FixIcon from "../../components/FixIcon/FixIcon";
 import HelmetCOM from "../../components/HelmetCOM/HelmetCOM";
 import { Helmet } from "react-helmet-async";
 
-//import page1 from "../../assets/FloorPlan/FloorPlan6/page1.jpg"
-import Ready from "../../components/Ready/Ready";
+import page1 from "../../assets/FloorPlan/FloorPlan6/unit_84d.jpg"
+
 
 const FloorPlan6 = () => {
 	const menuContents = [
@@ -20,6 +20,7 @@ const FloorPlan6 = () => {
 		{ title: "84A", url: "/FloorPlan/84A" },
 		{ title: "84B", url: "/FloorPlan/84B" },
 		{ title: "84C", url: "/FloorPlan/114A" },
+    	{ title: "84D", url: "/FloorPlan/114B" },
 		// { title: "세대안내영상", url: "/FloorPlan/videos" }, // 세대안내영상 링크
 		{ title: "E-모델하우스", url: "/FloorPlan/Emodel" },
 	];
@@ -59,7 +60,7 @@ const FloorPlan6 = () => {
 			<Header isChanged={isScroll} />
 			<FixIcon />
 
-			<Bener title="힐스테이트 도안리버파크 119B 평면image" />
+			<Bener title="세대안내내" />
 
 			<MenuBar contents={menuContents} />
 
@@ -69,14 +70,12 @@ const FloorPlan6 = () => {
 			</div>
 
 			{/* 이미지에 애니메이션 효과 추가 */}
-			{/*<img
+			<img
 				className={`${styles.image2} ${isImage2Loaded ? styles.showImage2 : ''}`}
 				src={page1}
 				alt="청약 안내"
 				onLoad={handleImageLoad}  // 이미지 로드 후 애니메이션 실행
-			/>*/}
-
-			<Ready />
+			/>
 
 			<div className={styles.commonBox2}>
 				<div className={styles.notice}>
